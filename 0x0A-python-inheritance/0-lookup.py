@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""0-lookup module
-"""
+"""lookup method module - no test cases needed"""
 
 
 def lookup(obj):
-    """lookup - function that returns the list of available
-    attributes and methods of an object.
+    """looks up the attr and methods of an object
     Args:
-        obj (object): an object to be looked up
-    Return: list of attributes and methods of the object
-    """
+        obj: the object we are looking up
+    Returns:
+        a list object of attr"""
     return dir(obj)

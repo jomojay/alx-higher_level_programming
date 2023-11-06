@@ -11,4 +11,11 @@ class MyList(list):
         args:
             self (MyList object)
         """
-        print(sorted(self))
+        list_copy = self[:]
+        list_copy.sort()
+        print(list_copy)
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testfile('tests/1-my_list.txt')

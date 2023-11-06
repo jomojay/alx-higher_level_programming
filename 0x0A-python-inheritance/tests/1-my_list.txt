@@ -30,7 +30,7 @@ Test: no arguments passed to print_sorted:
 	>>> test.__class__.print_sorted()
 	Traceback (most recent call last):
 	...
-	TypeError: MyList.print_sorted() missing 1 required positional argument: 'self'
+	TypeError: print_sorted() missing 1 required positional argument: 'self'
 
 Test: Test: empty list for print_sorted:
 
@@ -43,14 +43,14 @@ Test: additional single argument passed to:
 	>>> test.print_sorted([1])
 	Traceback (most recent call last):
 	...
-	TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 Test: 2 aditional args passed:
 
 	>>> test.print_sorted([1, 8, 7], 1)
 	Traceback (most recent call last):
 	...
-	TypeError: MyList.print_sorted() takes 1 positional argument but 3 were given
+	TypeError: print_sorted() takes 1 positional argument but 3 were given
 
 Test: normal behavior:
 

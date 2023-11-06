@@ -1,6 +1,5 @@
-#!/usr/bin/bash
-"""1-my_list module
-"""
+#!/usr/bin/python3
+"""1-my_list module"""
 
 
 class MyList(list):

@@ -30,21 +30,21 @@ Test: no args for area:
 	>>> test.__class__.area()
 	Traceback (most recent call last):
 	...
-	TypeError: area() missing 1 required positional argument: 'self'
+	TypeError: BaseGeometry.area() missing 1 required positional argument: 'self'
 
 Test: single additional arg for area:
 
 	>>> test.area(7)
 	Traceback (most recent call last):
 	...
-	TypeError: area() takes 1 positional argument but 2 were given
+	TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
 
 Test: two extra args for area:
 
 	>>> test.area(1, 7)
 	Traceback (most recent call last):
 	...
-	TypeError: area() takes 1 positional argument but 3 were given
+	TypeError: BaseGeometry.area() takes 1 positional argument but 3 were given
 
 Test: integer_validator method is an instance method:
 
@@ -64,21 +64,21 @@ Test: call int val via class no args:
 	>>> test.__class__.integer_validator()
 	Traceback (most recent call last):
 	...
-	TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+	TypeError: BaseGeometry.integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
 Test: send no arg in call:
 
 	>>> test.integer_validator()
 	Traceback (most recent call last):
 	...
-	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 Test: send lots of args:
 
 	>>> test.integer_validator(1, 8, 7)
 	Traceback (most recent call last):
 	...
-	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+	TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 Test: give a float as value:
 

@@ -6,6 +6,7 @@ from models.square import Square
 from random import randrange
 from contextlib import redirect_stdout
 import io
+import pep8
 
 
 class TestSquare(unittest.TestCase):
@@ -18,6 +19,24 @@ class TestSquare(unittest.TestCase):
     def tearDown(self):
         '''clean up after test_method.'''
         pass
+
+    def test_pep8_conformance_square(self):
+        """
+        Test that square.py file conform to PEP8
+        """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/square.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
+
+    def test_pep8_conformance_test_square(self):
+        """
+        Test that test_square.py file conform to PEP8
+        """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_square.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
     def test_1_class(self):
         '''test Square class type'''

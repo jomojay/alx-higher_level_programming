@@ -6,6 +6,7 @@ from models.rectangle import Rectangle
 from random import randrange
 from contextlib import redirect_stdout
 import io
+import pep8
 
 
 class TestRectangle(unittest.TestCase):
@@ -18,6 +19,24 @@ class TestRectangle(unittest.TestCase):
     def tearDown(self):
         '''Cleans up after each test_method.'''
         pass
+
+    def test_pep8_conformance_rectangle(self):
+        """
+        Test that rectangle.py file conform to PEP8
+        """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/rectangle.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
+
+    def test_pep8_conformance_test_rectangle(self):
+        """
+        Test that test_rectangle.py file conform to PEP8
+        """
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['tests/test_models/test_rectangle.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
     def test_1_class(self):
         '''class'''

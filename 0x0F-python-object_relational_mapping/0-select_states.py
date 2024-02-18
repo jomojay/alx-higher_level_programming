@@ -13,4 +13,4 @@ if __name__ == "__main__":
     for row in query_rows:
         print(row)
     cur.close()
-    conn.close()
+    db.close()

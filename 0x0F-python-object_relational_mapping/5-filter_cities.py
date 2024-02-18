@@ -18,4 +18,4 @@ if __name__ == "__main__":
     cities = [city[1] for city in cities]
     print(", ".join(cities))
     cur.close()
-    conn.close()
+    db.close()

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" module that fetches https://intranet.hbtn.io/status"""
+""" module that fetches https://alx-intranet.hbtn.io/status"""
 import urllib.request as request
 
 
@@ -7,7 +7,7 @@ from urllib.request import urlopen
 
 
 if __name__ == "__main__":
-    url = 'https://intranet.hbtn.io/status'
+    url = 'https://alx-intranet.hbtn.io/status'
     with urlopen(url) as response:
         bytes_content = response.read()
         content = bytes_content.decode('utf-8')

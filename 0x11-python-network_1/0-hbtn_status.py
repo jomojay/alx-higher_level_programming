@@ -3,8 +3,14 @@
 import urllib.request as request
 
 
+from urllib.request import urlopen
+
+
 if __name__ == "__main__":
-    with request.urlopen("https://intranet.hbtn.io/status") as result:
-        body = result.read()
-        print("Body response:\n\t- type: {}\n\t- content: {}\n\t\
-- utf8 content: {}".format(type(body), body, body.decode("utf-8")))
+    url = 'https://intranet.hbtn.io/status'
+    with urlopen(url) as response:
+        bytes_content = response.read()
+        content = bytes_content.decode('utf-8')
+        string = 'Body response:\n\t- type: {}\n\t- content: {}\n\t- \
+utf8 content: {}'.format(type(bytes_content), bytes_content, content)
+        print(string)
